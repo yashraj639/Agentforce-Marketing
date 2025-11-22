@@ -70,7 +70,6 @@ const GridContainer = ({
       <div
         className={cn(
           "flex items-center justify-center w-full h-full rounded-[12px] p-px relative z-10",
-          src,
           className
         )}
       >
