@@ -8,10 +8,6 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "**", // allow any CDN/domain (you can restrict if needed)
       },
-      {
-        protocol: "https",
-        hostname: "", 
-      },
     ],
   },
 };
