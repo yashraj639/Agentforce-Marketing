@@ -51,6 +51,14 @@ const GridContainer = ({
   containerClassName,
   alt,
 }: GridContainerProps) => {
+  const random = useMemo(
+    () => ({
+      duration: Math.random() * 0.5 + 0.2,
+      delay: Math.random() * 0.5 + 0.2,
+    }),
+    []
+  );
+
   return (
     <div
       className={cn(
@@ -78,15 +86,12 @@ const GridContainer = ({
                   opacity: 1,
                   filter: "blur(0px)",
                 }}
-                transition={{
-                  duration: Math.random() * 0.5 + 0.2,
-                  delay: Math.random() * 0.5 + 0.2,
-                }}
+                transition={random}
               >
                 <Image
                   width={120}
                   height={120}
-                  src={src!}
+                  src={src}
                   alt="grid image"
                   className="object-cover aspect-square rounded-[12px] relative z-20"
                 />
