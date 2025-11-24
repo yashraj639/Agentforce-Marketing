@@ -41,8 +41,8 @@ export const MobileNavbar = () => {
   };
 
   const child = {
-    hidden: { opacity: 0, x: -14 },
-    show: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, y: -14 },
+    show: { opacity: 1, y: 0 },
   };
 
   return (
@@ -59,7 +59,6 @@ export const MobileNavbar = () => {
             animate={{
               opacity: 1,
               backdropFilter: "blur(18px)",
-              backgroundColor: "rgba(255, 255, 255, 0.6)",
             }}
             exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
             transition={{ duration: 0.3 }}
