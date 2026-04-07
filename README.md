@@ -1,6 +1,17 @@
 # Agentforce Marketing — Landing Page
 
-> A modern, animated marketing landing page built with **Next.js 16**, **Tailwind CSS v4**, and **Framer Motion**.
+<div align="center">
+
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat&logo=next.js)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06b6d4?style=flat&logo=tailwind-css)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178c6?style=flat&logo=typescript)
+![React](https://img.shields.io/badge/React-19-61dafb?style=flat&logo=react)
+
+A modern, animated marketing landing page built with **Next.js 16**, **Tailwind CSS v4**, and **Framer Motion**.
+
+[Demo](https://agentforce-rho.vercel.app) · [Features](#-features) · [Tech Stack](#-tech-stack) · [Getting Started](#-getting-started)
+
+</div>
 
 ---
 
@@ -80,24 +91,25 @@ npm run lint
 ```
 ├── app/
 │   ├── components/
-│   │   ├── navbar.tsx            # Responsive navbar (desktop + mobile drawer)
-│   │   ├── hero.tsx              # Hero section
-│   │   ├── logo-cloud.tsx        # Logo marquee
-│   │   ├── features/             # Primary features section
-│   │   ├── features-secondary/   # Secondary features section
-│   │   ├── features-third/       # Third features section
-│   │   ├── speed.tsx             # Speed / performance highlight
-│   │   ├── outcomes/             # Outcomes section
-│   │   ├── pricing.tsx           # Pricing tiers
 │   │   ├── faq.tsx               # FAQ accordion
-│   │   ├── footer.tsx            # Site footer
-│   │   └── ui/                   # Shared UI primitives (Button, etc.)
-│   ├── globals.css               # Global styles & Tailwind base
-│   ├── layout.tsx                # Root layout with theme provider
-│   └── page.tsx                  # Home page assembly
+│   │   ├── logo-cloud.tsx        # Logo marquee
+│   │   └── mode-toggle.tsx       # Theme toggle button
+│   ├── lib/
+│   │   └── utils.ts              # Utility functions (cn helper)
+│   ├── providers/
+│   │   └── theme-provider.tsx    # Dark/light mode provider
+│   ├── globals.css               # Global styles & Tailwind v4 config
+│   ├── layout.tsx                # Root layout
+│   └── page.tsx                  # Home page
+├── components/
+│   └── ui/
+│       └── dotted-glow-background.tsx  # Background effect component
 ├── public/                       # Static assets & images
 ├── next.config.ts
+├── postcss.config.mjs
 ├── tailwind.config.ts
+├── tsconfig.json
+├── eslint.config.mjs
 └── package.json
 ```
 
@@ -106,19 +118,18 @@ npm run lint
 ## 🎨 Customization
 
 - **Colors & Theme** — Edit design tokens in `app/globals.css`
-- **Nav Links** — Update the `navLinks` array in `app/components/navbar.tsx`
 - **Content** — Each section component is self-contained — edit them individually in `app/components/`
-- **Dark Mode** — Theme switching is handled by the `ModeToggleButton` component using `next-themes`
+- **Dark Mode** — Theme switching is handled by `ModeToggle` component using `next-themes`
 
 ---
 
 ## 📦 Deployment
 
-The easiest way to deploy is with **Vercel**:
+Deploy easily to **Vercel**:
 
-[![Deployed on Vercel](https://agentforce-rho.vercel.app/)]
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/agentforce-marketing)
 
-Or use any platform that supports Node.js:
+Or build and run anywhere with Node.js:
 
 ```bash
 npm run build
@@ -129,4 +140,4 @@ npm run start
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+MIT License — feel free to use this project for your own purposes.
